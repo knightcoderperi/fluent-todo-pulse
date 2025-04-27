@@ -1,5 +1,6 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
 type User = {
