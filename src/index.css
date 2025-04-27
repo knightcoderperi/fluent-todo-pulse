@@ -91,10 +91,7 @@
     @apply bg-background text-foreground antialiased scroll-smooth;
   }
 
-  /* Smooth scrolling and transitions */
-  .transition-all {
-    @apply transition-all duration-200 ease-in-out;
-  }
+
 
   /* Improved dark mode transitions */
   :root {
