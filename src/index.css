@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,15 +82,58 @@
     --sidebar-border: 262 70% 30%;
     --sidebar-ring: 262 80% 60%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased scroll-smooth;
+  }
+
+  /* Smooth scrolling and transitions */
+  .transition-all {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Improved dark mode transitions */
+  :root {
+    --transition-duration: 0.3s;
+  }
+
+  .dark body {
+    transition: background-color var(--transition-duration) ease;
+  }
+
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 
